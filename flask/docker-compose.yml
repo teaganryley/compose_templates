@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  flask:
+    build:
+      context: .
+      dockerfile: flask.Dockerfile
+    image: flask_demo
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/src
